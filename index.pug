@@ -1,0 +1,173 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css")
+    link(rel="stylesheet", href="css/index.css")
+  body
+    .row.main
+      .col-12.col-xl-9 
+        .ozon__header
+          .row.ozon__header__row
+            .filter.ozon__header__filter
+              .filter__column
+                form.filter__search-form.search-form(action="")
+                  input(type="text", value="" placeholder="Поиск по тегам").search-form__input
+                  button(type="submit").icon-search.btn-primary.search-form__button
+                .filter__dropdown.dropdown.dropdown-white
+                  button.btn-white.dropdown-white__button.dropdown-toggle.filter__dropdown-btn(type='button' data-toggle='dropdown' value='Проект основной') Проект основной
+                    span.caret
+                  ul.dropdown-menu.filter__dropdown-menu(value='Проект основной')
+                    li(onclick='dropdown(this.innerHTML);').dropdown-item.filter__dropdown-item Проект основной
+                    li(onclick='dropdown(this.innerHTML);').dropdown-item.filter__dropdown-item Раздел
+                .filter__dropdown.dropdown.dropdown-white
+                  button.btn-white.dropdown-white__button.dropdown-toggle.filter__dropdown-btn.drop-8(type='button' data-toggle='dropdown' value='Раздел') Раздел
+                    span.caret
+                  ul.dropdown-menu.filter__dropdown-menu(value='Раздел')
+                    li(onclick='dropdown2(this.innerHTML);').dropdown-item.filter__dropdown-item Раздел
+                    li(onclick='dropdown2(this.innerHTML);').dropdown-item.filter__dropdown-item Проект основной
+              .filter__column
+                .calendar
+                  .calendar__btn
+                    a(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false').dropdown-toggle.calendar__btn__button
+                      svg(width="26" height="26" class="calendar__btn__svg" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        g(clip-path="url(#clip0)")
+                          path(d="M6.50002 0C5.98716 0 5.57143 0.415735 5.57143 0.928589V2.78571H7.42855V0.928589C7.42855 0.415735 7.01281 0 6.50002 0Z" fill="#00498D")
+                          path(d="M19.5 0C18.9871 0 18.5714 0.415735 18.5714 0.928589V2.78571H20.4285V0.928589C20.4286 0.415735 20.0128 0 19.5 0Z" fill="#00498D")
+                          path(d="M23.2143 2.78572H20.4286V6.50002C20.4286 7.01288 20.0128 7.42861 19.5 7.42861C18.9871 7.42861 18.5714 7.01288 18.5714 6.50002V2.78572H7.42855V6.50002C7.42855 7.01288 7.01281 7.42861 6.49996 7.42861C5.98711 7.42861 5.57137 7.01288 5.57137 6.50002V2.78572H2.78571C1.2472 2.78572 0 4.03293 0 5.57143V23.2143C0 24.7528 1.2472 26 2.78571 26H23.2143C24.7528 26 26 24.7528 26 23.2143V5.57143C26 4.03293 24.7528 2.78572 23.2143 2.78572ZM24.1428 23.2143C24.1428 23.7272 23.7271 24.1429 23.2142 24.1429H2.78571C2.27286 24.1429 1.85712 23.7272 1.85712 23.2143V11.1429H24.1428V23.2143Z" fill="#00498D")
+                          path(d="M7.42855 13H5.57143C5.05857 13 4.64284 13.4157 4.64284 13.9286C4.64284 14.4414 5.05857 14.8572 5.57143 14.8572H7.42855C7.9414 14.8572 8.35714 14.4414 8.35714 13.9286C8.35714 13.4157 7.9414 13 7.42855 13Z" fill="#00498D")
+                          path(d="M13.9286 13H12.0714C11.5586 13 11.1428 13.4157 11.1428 13.9286C11.1428 14.4414 11.5586 14.8572 12.0714 14.8572H13.9286C14.4414 14.8572 14.8571 14.4414 14.8571 13.9286C14.8571 13.4157 14.4414 13 13.9286 13Z" fill="#00498D")
+                          path(d="M20.4286 13H18.5715C18.0586 13 17.6429 13.4157 17.6429 13.9286C17.6429 14.4414 18.0586 14.8572 18.5715 14.8572H20.4286C20.9414 14.8572 21.3572 14.4414 21.3572 13.9286C21.3572 13.4157 20.9414 13 20.4286 13Z" fill="#00498D")
+                          path(d="M7.42855 16.7143H5.57143C5.05857 16.7143 4.64284 17.13 4.64284 17.6429C4.64284 18.1557 5.05857 18.5714 5.57143 18.5714H7.42855C7.9414 18.5714 8.35714 18.1557 8.35714 17.6429C8.35714 17.13 7.9414 16.7143 7.42855 16.7143Z" fill="#00498D")
+                          path(d="M13.9286 16.7143H12.0714C11.5586 16.7143 11.1428 17.13 11.1428 17.6429C11.1428 18.1557 11.5586 18.5714 12.0714 18.5714H13.9286C14.4414 18.5714 14.8571 18.1557 14.8571 17.6429C14.8571 17.13 14.4414 16.7143 13.9286 16.7143Z" fill="#00498D")
+                          path(d="M20.4286 16.7143H18.5715C18.0586 16.7143 17.6429 17.13 17.6429 17.6429C17.6429 18.1557 18.0586 18.5714 18.5715 18.5714H20.4286C20.9414 18.5714 21.3572 18.1557 21.3572 17.6429C21.3571 17.13 20.9414 16.7143 20.4286 16.7143Z" fill="#00498D")
+                          path(d="M7.42855 20.4286H5.57143C5.05857 20.4286 4.64284 20.8443 4.64284 21.3571C4.64284 21.87 5.05857 22.2857 5.57143 22.2857H7.42855C7.9414 22.2857 8.35714 21.8699 8.35714 21.3571C8.35714 20.8442 7.9414 20.4286 7.42855 20.4286Z" fill="#00498D")
+                          path(d="M13.9286 20.4286H12.0714C11.5586 20.4286 11.1428 20.8443 11.1428 21.3571C11.1428 21.87 11.5586 22.2857 12.0714 22.2857H13.9286C14.4414 22.2857 14.8571 21.87 14.8571 21.3571C14.8571 20.8443 14.4414 20.4286 13.9286 20.4286Z" fill="#00498D")
+                          path(d="M20.4286 20.4286H18.5715C18.0586 20.4286 17.6429 20.8443 17.6429 21.3571C17.6429 21.87 18.0586 22.2857 18.5715 22.2857H20.4286C20.9414 22.2857 21.3572 21.87 21.3572 21.3571C21.3572 20.8443 20.9414 20.4286 20.4286 20.4286Z" fill="#00498D")
+                        defs
+                        clipPath(id="clip0")
+                          rect(width="26" height="26" fill="white")
+                      input(type="text" id="from" name="from" autocomplete="off" placeholder="с 20.07.2021").calendar__btn__input
+                  .calendar__btn
+                    a(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false').dropdown-toggle.calendar__btn__button
+                      svg(width="26" height="26" class="calendar__btn__svg" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        g(clip-path="url(#clip0)")
+                          path(d="M6.50002 0C5.98716 0 5.57143 0.415735 5.57143 0.928589V2.78571H7.42855V0.928589C7.42855 0.415735 7.01281 0 6.50002 0Z" fill="#00498D")
+                          path(d="M19.5 0C18.9871 0 18.5714 0.415735 18.5714 0.928589V2.78571H20.4285V0.928589C20.4286 0.415735 20.0128 0 19.5 0Z" fill="#00498D")
+                          path(d="M23.2143 2.78572H20.4286V6.50002C20.4286 7.01288 20.0128 7.42861 19.5 7.42861C18.9871 7.42861 18.5714 7.01288 18.5714 6.50002V2.78572H7.42855V6.50002C7.42855 7.01288 7.01281 7.42861 6.49996 7.42861C5.98711 7.42861 5.57137 7.01288 5.57137 6.50002V2.78572H2.78571C1.2472 2.78572 0 4.03293 0 5.57143V23.2143C0 24.7528 1.2472 26 2.78571 26H23.2143C24.7528 26 26 24.7528 26 23.2143V5.57143C26 4.03293 24.7528 2.78572 23.2143 2.78572ZM24.1428 23.2143C24.1428 23.7272 23.7271 24.1429 23.2142 24.1429H2.78571C2.27286 24.1429 1.85712 23.7272 1.85712 23.2143V11.1429H24.1428V23.2143Z" fill="#00498D")
+                          path(d="M7.42855 13H5.57143C5.05857 13 4.64284 13.4157 4.64284 13.9286C4.64284 14.4414 5.05857 14.8572 5.57143 14.8572H7.42855C7.9414 14.8572 8.35714 14.4414 8.35714 13.9286C8.35714 13.4157 7.9414 13 7.42855 13Z" fill="#00498D")
+                          path(d="M13.9286 13H12.0714C11.5586 13 11.1428 13.4157 11.1428 13.9286C11.1428 14.4414 11.5586 14.8572 12.0714 14.8572H13.9286C14.4414 14.8572 14.8571 14.4414 14.8571 13.9286C14.8571 13.4157 14.4414 13 13.9286 13Z" fill="#00498D")
+                          path(d="M20.4286 13H18.5715C18.0586 13 17.6429 13.4157 17.6429 13.9286C17.6429 14.4414 18.0586 14.8572 18.5715 14.8572H20.4286C20.9414 14.8572 21.3572 14.4414 21.3572 13.9286C21.3572 13.4157 20.9414 13 20.4286 13Z" fill="#00498D")
+                          path(d="M7.42855 16.7143H5.57143C5.05857 16.7143 4.64284 17.13 4.64284 17.6429C4.64284 18.1557 5.05857 18.5714 5.57143 18.5714H7.42855C7.9414 18.5714 8.35714 18.1557 8.35714 17.6429C8.35714 17.13 7.9414 16.7143 7.42855 16.7143Z" fill="#00498D")
+                          path(d="M13.9286 16.7143H12.0714C11.5586 16.7143 11.1428 17.13 11.1428 17.6429C11.1428 18.1557 11.5586 18.5714 12.0714 18.5714H13.9286C14.4414 18.5714 14.8571 18.1557 14.8571 17.6429C14.8571 17.13 14.4414 16.7143 13.9286 16.7143Z" fill="#00498D")
+                          path(d="M20.4286 16.7143H18.5715C18.0586 16.7143 17.6429 17.13 17.6429 17.6429C17.6429 18.1557 18.0586 18.5714 18.5715 18.5714H20.4286C20.9414 18.5714 21.3572 18.1557 21.3572 17.6429C21.3571 17.13 20.9414 16.7143 20.4286 16.7143Z" fill="#00498D")
+                          path(d="M7.42855 20.4286H5.57143C5.05857 20.4286 4.64284 20.8443 4.64284 21.3571C4.64284 21.87 5.05857 22.2857 5.57143 22.2857H7.42855C7.9414 22.2857 8.35714 21.8699 8.35714 21.3571C8.35714 20.8442 7.9414 20.4286 7.42855 20.4286Z" fill="#00498D")
+                          path(d="M13.9286 20.4286H12.0714C11.5586 20.4286 11.1428 20.8443 11.1428 21.3571C11.1428 21.87 11.5586 22.2857 12.0714 22.2857H13.9286C14.4414 22.2857 14.8571 21.87 14.8571 21.3571C14.8571 20.8443 14.4414 20.4286 13.9286 20.4286Z" fill="#00498D")
+                          path(d="M20.4286 20.4286H18.5715C18.0586 20.4286 17.6429 20.8443 17.6429 21.3571C17.6429 21.87 18.0586 22.2857 18.5715 22.2857H20.4286C20.9414 22.2857 21.3572 21.87 21.3572 21.3571C21.3572 20.8443 20.9414 20.4286 20.4286 20.4286Z" fill="#00498D")
+                        defs
+                        clipPath(id="clip0")
+                          rect(width="26" height="26" fill="white")
+                      input(type="text" id="to" name="to" autocomplete="off" placeholder="по 20.07.2021").calendar__btn__input
+                .filter__checkbox.filter-checkbox
+                  .filter-checkbox__item
+                    label.filter-checkbox__label Искать в:
+                    label(for="" class="checkbox-label")
+                      input(type="checkbox" class="mycheckbox" checked)
+                      span(class="checkbox-custom")
+                  .filter-checkbox__item
+                    label.filter-checkbox__label Заголовке
+                    label(for="" class="checkbox-label")
+                      input(type="checkbox" class="mycheckbox" checked)
+                      span(class="checkbox-custom")
+                  .filter-checkbox__item
+                    label.filter-checkbox__label Тегах
+                    label(for="" class="checkbox-label")
+                      input(type="checkbox" class="mycheckbox" checked)
+                      span(class="checkbox-custom")
+                  .filter-checkbox__item
+                    label.filter-checkbox__label КС
+                    label(for="" class="checkbox-label")
+                      input(type="checkbox" class="mycheckbox")
+                      span(class="checkbox-custom")
+                  .filter-checkbox__item
+                    label.filter-checkbox__label Тексте
+                    label(for="" class="checkbox-label")
+                      input(type="checkbox" class="mycheckbox")
+                      span(class="checkbox-custom")
+          .row.ozon__header__row
+            .tags-xl-row
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag.current tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+            .tags-xl-row
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag.current tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+              .tags-xl-tag tag
+        .parsing 
+          .parsing-aside
+            include components/parsing-aside.pug 
+            +parsing-aside 
+          .parsing-main 
+            .parsing-header.row
+              .col.parsing-header__column
+                p.parsing-header__title.dropdown-toggle Заголовок
+              .col.parsing-header__column
+                p.parsing-header__title Ключевые слова
+              .col-6.parsing-header__column
+                p.parsing-header__title Текст
+              .col.parsing-header__column.parsing-header__column_small
+            .parsing-body
+              include components/parsing-body.pug 
+              +parsing-body
+            .parsing-footer  
+              include components/parsing-footer.pug
+              +parsing-footer
+      .col-12.col-xl-3
+        .sidebar
+          h3.sidebar__title Подбор переводчика
+          .sidebar__imgs 
+            .sidebar__imgs-item.sidebar__imgs-item_current
+              img(src="images/yandex.png", alt="yandex").sidebar__imgs-item__img
+            .sidebar__imgs-item
+              img(src="images/google.png", alt="google").sidebar__imgs-item__img
+            .sidebar__imgs-item
+              img(src="images/promt.png", alt="promt").sidebar__imgs-item__img
+
+        .sidebar-footer 
+          button.save-btn.sidebar-footer__btn 
+            .save-btn__i
+              svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M15.7751 6H14.4522C14.1645 6 13.8909 6.13869 13.7217 6.37644L9.28767 12.5467L7.2794 9.75024C7.11017 9.51532 6.83939 9.37381 6.54887 9.37381H5.22601C5.04267 9.37381 4.93548 9.58325 5.04267 9.73326L8.55714 14.6241C8.64016 14.7404 8.74961 14.8352 8.87641 14.9005C9.00321 14.9659 9.14371 15 9.28626 15C9.42882 15 9.56932 14.9659 9.69612 14.9005C9.82292 14.8352 9.93237 14.7404 10.0154 14.6241L15.9556 6.35946C16.0656 6.20945 15.9584 6 15.7751 6Z")
+                path(d="M10.5 0C4.70156 0 0 4.70156 0 10.5C0 16.2984 4.70156 21 10.5 21C16.2984 21 21 16.2984 21 10.5C21 4.70156 16.2984 0 10.5 0ZM10.5 19.2188C5.68594 19.2188 1.78125 15.3141 1.78125 10.5C1.78125 5.68594 5.68594 1.78125 10.5 1.78125C15.3141 1.78125 19.2188 5.68594 19.2188 10.5C19.2188 15.3141 15.3141 19.2188 10.5 19.2188Z")
+            p Сохранить выбор перевода
+
+            
+  
+  script(src="https://code.jquery.com/jquery-1.12.4.js") 
+  script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js") 
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js") 
+  script(src="scripts/index.js") 
