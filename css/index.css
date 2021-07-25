@@ -2127,6 +2127,7 @@ body {
   margin-left: 10px;
   border-radius: 6px;
   background: #fff;
+  border-radius: 6px;
 }
 .parsing-footer__progress-bar {
   background: #00C48C;
@@ -2135,6 +2136,7 @@ body {
   line-height: 16px;
   text-align: center;
   color: #FFFFFF;
+  border-radius: 6px;
 }
 
 .nonbg {
