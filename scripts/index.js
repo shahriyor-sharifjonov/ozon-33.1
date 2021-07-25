@@ -46,10 +46,15 @@ tag.forEach(el => {
 
 function dropdown(val) {
   var y = document.getElementsByClassName('dropdown-toggle');
-  var aNode = y[0].innerHTML = val + ' <span class="caret"></span>'; // Append 
+  var aNode = y[0].innerHTML = val + ' <span class="caret"></span>';
 }
 
 function dropdown2(val) {
   var y = document.getElementsByClassName('drop-8');
-  var aNode = y[0].innerHTML = val + ' <span class="caret"></span>'; // Append 
+  var aNode = y[0].innerHTML = val + ' <span class="caret"></span>';
 }
+
+$('.sidebar__imgs-item').click(function(){
+  $('.sidebar__imgs-item').removeClass('sidebar__imgs-item_current');
+  $(this).addClass('sidebar__imgs-item_current');
+})

@@ -155,7 +155,57 @@ html(lang="en")
               img(src="images/google.png", alt="google").sidebar__imgs-item__img
             .sidebar__imgs-item
               img(src="images/promt.png", alt="promt").sidebar__imgs-item__img
-
+          .sidebar__translate 
+            p.sidebar__translate-p Направление перевода
+            .sidebar__translate-drops
+              select#mySelect2.sidebar__translate-dropdown
+                option(value='eng').sidebar__translate-dropdown__item eng
+                option(value='ru').sidebar__translate-dropdown__item ru
+                option(value='uz').sidebar__translate-dropdown__item uz
+              svg(width='11' height='11' viewbox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg').sidebar__translate-svg
+                g(clip-path='url(#clip0)')
+                  path(fill-rule='evenodd' clip-rule='evenodd' d='M0.688114 7.90606C0.688114 7.99723 0.724331 8.08466 0.788796 8.14913C0.853262 8.21359 0.940696 8.24981 1.03186 8.24981H9.13955L6.97599 10.4127C6.91144 10.4772 6.87518 10.5648 6.87518 10.6561C6.87518 10.7473 6.91144 10.8349 6.97599 10.8994C7.04054 10.964 7.12808 11.0002 7.21936 11.0002C7.31065 11.0002 7.39819 10.964 7.46274 10.8994L10.2127 8.14943C10.2448 8.1175 10.2701 8.07957 10.2875 8.03781C10.3048 7.99604 10.3137 7.95127 10.3137 7.90606C10.3137 7.86084 10.3048 7.81607 10.2875 7.77431C10.2701 7.73255 10.2448 7.69461 10.2127 7.66268L7.46274 4.91268C7.39819 4.84814 7.31065 4.81187 7.21936 4.81187C7.12808 4.81187 7.04054 4.84814 6.97599 4.91268C6.91144 4.97723 6.87518 5.06478 6.87518 5.15606C6.87518 5.24734 6.91144 5.33489 6.97599 5.39943L9.13955 7.56231H1.03186C0.940696 7.56231 0.853262 7.59852 0.788796 7.66299C0.724331 7.72746 0.688114 7.81489 0.688114 7.90606ZM10.3131 3.09356C10.3131 3.18473 10.2769 3.27216 10.2124 3.33663C10.148 3.40109 10.0605 3.43731 9.96936 3.43731H1.86168L4.02524 5.60018C4.0572 5.63214 4.08255 5.67009 4.09985 5.71184C4.11715 5.7536 4.12605 5.79836 4.12605 5.84356C4.12605 5.88876 4.11715 5.93351 4.09985 5.97527C4.08255 6.01703 4.0572 6.05497 4.02524 6.08693C3.99328 6.11889 3.95534 6.14425 3.91358 6.16154C3.87182 6.17884 3.82706 6.18774 3.78186 6.18774C3.73667 6.18774 3.69191 6.17884 3.65015 6.16154C3.60839 6.14425 3.57045 6.11889 3.53849 6.08693L0.788489 3.33693C0.756477 3.305 0.731079 3.26707 0.71375 3.22531C0.69642 3.18354 0.6875 3.13877 0.6875 3.09356C0.6875 3.04834 0.69642 3.00357 0.71375 2.96181C0.731079 2.92005 0.756477 2.88212 0.788489 2.85018L3.53849 0.100184C3.60304 0.0356366 3.69058 -0.00062561 3.78186 -0.00062561C3.87315 -0.00062561 3.96069 0.0356366 4.02524 0.100184C4.08979 0.164731 4.12605 0.252275 4.12605 0.343559C4.12605 0.434842 4.08979 0.522387 4.02524 0.586934L1.86168 2.74981H9.96936C10.0605 2.74981 10.148 2.78603 10.2124 2.85049C10.2769 2.91496 10.3131 3.00239 10.3131 3.09356Z' fill='#00498D')
+                defs
+                  clippath#clip0
+                    rect(width='11' height='11' fill='white')
+              select#mySelect3.sidebar__translate-dropdown
+                option(value='ru').sidebar__translate-dropdown__item ru
+                option(value='eng').sidebar__translate-dropdown__item eng
+                option(value='uz').sidebar__translate-dropdown__item uz
+          .sidebar__stat 
+            .sidebar__stat-item 
+              .sidebar__stat-progress.progress 
+                .sidebar__stat-progress-bar.sidebar__stat-progress-bar_green.progress-bar(role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100") 100%
+              button.sidebar__stat-btn Загрузить
+            .sidebar__stat-item 
+              .sidebar__stat-progress.progress 
+                .sidebar__stat-progress-bar.sidebar__stat-progress-bar_yellow.progress-bar(role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100") 60%
+              button.sidebar__stat-btn Перевод
+          .sidebar__main 
+            p.sidebar__title Детализация статьи
+            .sidebar__main-header 
+              .sidebar__main-header__column
+                img(src="images/office.png", alt="").sidebar__main-header__img
+              .sidebar__main-header__column.ml-3
+                p.sidebar__main-header__title Foto1.jpg
+                p.sidebar__main-header__desc 450x460
+                p.sidebar__main-header__desc Alt: купить мужские туфли в Украине
+            .sidebar__main-body
+              .sidebar__main-body__item 
+                p.sidebar__main-body__title Заголовок
+                p.sidebar__main-body__p Заголовок статьи
+                p.sidebar__main-body__trans Article title
+              .sidebar__main-body__item 
+                p.sidebar__main-body__title Дескрипшн
+                p.sidebar__main-body__p это текст-"рыба", часто используемый в печати
+                p.sidebar__main-body__trans this is the text "fish" often used in print
+              .sidebar__main-body__item 
+                p.sidebar__main-body__title Ключевые слова
+                p.sidebar__main-body__p это текст-"рыба", часто используемый в печати
+                p.sidebar__main-body__trans this is the text "fish" often used in print
+              .sidebar__main-body__item 
+                p.sidebar__main-body__title Текст
+                .sidebar__main-body__text это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. заметных изменений пят. это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. заметных изменений пят
         .sidebar-footer 
           button.save-btn.sidebar-footer__btn 
             .save-btn__i
